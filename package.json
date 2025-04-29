@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5"
+  },
+  "name": "cors-proxy",
+  "version": "1.0.0",
+  "description": "proxy para usar la API de mercado libre",
+  "main": "cors-proxy.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omargarcia21/mercado-busqueda-backend.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Omar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omargarcia21/mercado-busqueda-backend/issues"
+  },
+  "homepage": "https://github.com/Omargarcia21/mercado-busqueda-backend#readme"
+}
