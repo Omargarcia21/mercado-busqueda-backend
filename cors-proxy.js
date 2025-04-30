@@ -9,8 +9,17 @@ const app = express();
 const PORT = 3001;
 const accessToken = process.env.ACCESS_TOKEN;
 
+app.use(cors());
+const allowedOrigins = ['https://mercado-busqueda-frontend.vercel.app'];
+
 app.use(cors({
-  origin: 'https://mercado-busqueda-frontend.vercel.app'
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('No permitido por CORS'));
+    }
+  }
 }));
 
 // Ruta GET que actúa como proxy para buscar productos
