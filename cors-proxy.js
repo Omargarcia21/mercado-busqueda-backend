@@ -36,7 +36,7 @@ app.get('/api/search', async (req, res) => {
     const response = await axios.get('https://api.mercadolibre.com/products/search', {
       params: { q: query, limit, site_id: 'MLM', status: 'active' },
       headers: {
-        Authorization: `Bearer $ACCESS_TOKEN`
+        Authorization: `Bearer ${process.env.ACCESS_TOKEN}`
       }
     });
 
